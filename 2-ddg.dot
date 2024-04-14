@@ -1,0 +1,23 @@
+digraph "main" {  
+"56" [label = <(METHOD,main)<SUB>10</SUB>> ]
+"59" [label = <(METHOD_RETURN,ANY)<SUB>10</SUB>> ]
+"64" [label = <(&lt;operator&gt;.assignment,user_name = input(&quot;Please enter your name: &quot;))<SUB>11</SUB>> ]
+"67" [label = <(process_name,process_name(user_name))<SUB>12</SUB>> ]
+"64" [label = <(&lt;operator&gt;.assignment,user_name = input(&quot;Please enter your name: &quot;))<SUB>11</SUB>> ]
+"64" [label = <(&lt;operator&gt;.assignment,user_name = input(&quot;Please enter your name: &quot;))<SUB>11</SUB>> ]
+"66" [label = <(IDENTIFIER,process_name,process_name(user_name))<SUB>12</SUB>> ]
+"67" [label = <(process_name,process_name(user_name))<SUB>12</SUB>> ]
+"61" [label = <(IDENTIFIER,input,input(&quot;Please enter your name: &quot;))<SUB>11</SUB>> ]
+"62" [label = <(input,input(&quot;Please enter your name: &quot;))<SUB>11</SUB>> ]
+  "64" -> "59"  [ label = "input(&quot;Please enter your name: &quot;)"] 
+  "64" -> "59"  [ label = "user_name = input(&quot;Please enter your name: &quot;)"] 
+  "67" -> "59"  [ label = "user_name"] 
+  "67" -> "59"  [ label = "process_name(user_name)"] 
+  "62" -> "64"  [ label = "&quot;Please enter your name: &quot;"] 
+  "56" -> "66" 
+  "64" -> "67"  [ label = "user_name"] 
+  "56" -> "67" 
+  "14" -> "61"  [ label = "input"] 
+  "56" -> "61" 
+  "56" -> "62" 
+}

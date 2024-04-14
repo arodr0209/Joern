@@ -1,0 +1,11 @@
+digraph "main" {  
+"64" [label = <(&lt;operator&gt;.assignment,user_name = input(&quot;Please enter your name: &quot;))<SUB>11</SUB>> ]
+"67" [label = <(process_name,process_name(user_name))<SUB>12</SUB>> ]
+"62" [label = <(input,input(&quot;Please enter your name: &quot;))<SUB>11</SUB>> ]
+"56" [label = <(METHOD,main)<SUB>10</SUB>> ]
+"59" [label = <(METHOD_RETURN,ANY)<SUB>10</SUB>> ]
+  "64" -> "67" 
+  "67" -> "59" 
+  "62" -> "64" 
+  "56" -> "62" 
+}

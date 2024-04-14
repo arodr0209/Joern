@@ -1,0 +1,43 @@
+digraph "process_name" {  
+"20" [label = <(METHOD,process_name)<SUB>1</SUB>> ]
+"24" [label = <(METHOD_RETURN,ANY)<SUB>1</SUB>> ]
+"23" [label = <(PARAM,name)<SUB>1</SUB>> ]
+"27" [label = <(&lt;operator&gt;.assignment,temp_list = [])<SUB>2</SUB>> ]
+"30" [label = <(&lt;operator&gt;.assignment,result_list = [])<SUB>3</SUB>> ]
+"36" [label = <(append,temp_list.append(name))<SUB>5</SUB>> ]
+"44" [label = <(append,result_list.append(temp_list[0]))<SUB>6</SUB>> ]
+"49" [label = <(print,print(result_list[0]))<SUB>8</SUB>> ]
+"27" [label = <(&lt;operator&gt;.assignment,temp_list = [])<SUB>2</SUB>> ]
+"27" [label = <(&lt;operator&gt;.assignment,temp_list = [])<SUB>2</SUB>> ]
+"30" [label = <(&lt;operator&gt;.assignment,result_list = [])<SUB>3</SUB>> ]
+"30" [label = <(&lt;operator&gt;.assignment,result_list = [])<SUB>3</SUB>> ]
+"36" [label = <(append,temp_list.append(name))<SUB>5</SUB>> ]
+"36" [label = <(append,temp_list.append(name))<SUB>5</SUB>> ]
+"44" [label = <(append,result_list.append(temp_list[0]))<SUB>6</SUB>> ]
+"44" [label = <(append,result_list.append(temp_list[0]))<SUB>6</SUB>> ]
+"48" [label = <(IDENTIFIER,print,print(result_list[0]))<SUB>8</SUB>> ]
+"49" [label = <(print,print(result_list[0]))<SUB>8</SUB>> ]
+  "27" -> "24"  [ label = "temp_list = []"] 
+  "30" -> "24"  [ label = "[]"] 
+  "30" -> "24"  [ label = "result_list = []"] 
+  "36" -> "24"  [ label = "temp_list"] 
+  "36" -> "24"  [ label = "name"] 
+  "36" -> "24"  [ label = "temp_list.append(name)"] 
+  "44" -> "24"  [ label = "result_list"] 
+  "44" -> "24"  [ label = "temp_list[0]"] 
+  "44" -> "24"  [ label = "result_list.append(temp_list[0])"] 
+  "49" -> "24"  [ label = "result_list[0]"] 
+  "49" -> "24"  [ label = "print(result_list[0])"] 
+  "20" -> "23" 
+  "20" -> "27" 
+  "20" -> "30" 
+  "27" -> "36"  [ label = "temp_list"] 
+  "20" -> "36" 
+  "23" -> "36"  [ label = "name"] 
+  "30" -> "44"  [ label = "result_list"] 
+  "20" -> "44" 
+  "36" -> "44"  [ label = "temp_list"] 
+  "17" -> "48"  [ label = "print"] 
+  "20" -> "48" 
+  "44" -> "49"  [ label = "result_list"] 
+}

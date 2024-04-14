@@ -1,0 +1,23 @@
+digraph "&lt;module&gt;" {  
+"14" [label = <(&lt;operator&gt;.assignment,input = __builtins__.input)<SUB>1</SUB>> ]
+"17" [label = <(&lt;operator&gt;.assignment,print = __builtins__.print)<SUB>1</SUB>> ]
+"53" [label = <(&lt;operator&gt;.assignment,process_name = def process_name(...))<SUB>1</SUB>> ]
+"71" [label = <(&lt;operator&gt;.assignment,main = def main(...))<SUB>10</SUB>> ]
+"73" [label = <(main,main())<SUB>14</SUB>> ]
+"13" [label = <(TYPE_REF,__builtins__.input,__builtins__.input)<SUB>1</SUB>> ]
+"16" [label = <(TYPE_REF,__builtins__.print,__builtins__.print)<SUB>1</SUB>> ]
+"19" [label = <(METHOD_REF,def process_name(...),process_name = def process_name(...))<SUB>1</SUB>> ]
+"55" [label = <(METHOD_REF,def main(...),main = def main(...))<SUB>10</SUB>> ]
+"7" [label = <(METHOD,&lt;module&gt;)<SUB>1</SUB>> ]
+"11" [label = <(METHOD_RETURN,ANY)<SUB>1</SUB>> ]
+  "14" -> "16" 
+  "17" -> "19" 
+  "53" -> "55" 
+  "71" -> "73" 
+  "73" -> "11" 
+  "13" -> "14" 
+  "16" -> "17" 
+  "19" -> "53" 
+  "55" -> "71" 
+  "7" -> "13" 
+}

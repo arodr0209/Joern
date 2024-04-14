@@ -1,0 +1,5 @@
+digraph "&lt;operator&gt;.listLiteral" {  
+"100" [label = <(METHOD,&lt;operator&gt;.listLiteral)> ]
+"102" [label = <(METHOD_RETURN,ANY)> ]
+  "100" -> "102" 
+}

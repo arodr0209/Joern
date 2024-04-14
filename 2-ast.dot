@@ -1,0 +1,31 @@
+digraph "main" {  
+"56" [label = <(METHOD,main)<SUB>10</SUB>> ]
+"57" [label = <(BLOCK,,)<SUB>10</SUB>> ]
+"64" [label = <(&lt;operator&gt;.assignment,user_name = input(&quot;Please enter your name: &quot;))<SUB>11</SUB>> ]
+"63" [label = <(IDENTIFIER,user_name,user_name = input(&quot;Please enter your name: &quot;))<SUB>11</SUB>> ]
+"62" [label = <(input,input(&quot;Please enter your name: &quot;))<SUB>11</SUB>> ]
+"61" [label = <(IDENTIFIER,input,input(&quot;Please enter your name: &quot;))<SUB>11</SUB>> ]
+"60" [label = <(LITERAL,&quot;Please enter your name: &quot;,input(&quot;Please enter your name: &quot;))<SUB>11</SUB>> ]
+"67" [label = <(process_name,process_name(user_name))<SUB>12</SUB>> ]
+"66" [label = <(IDENTIFIER,process_name,process_name(user_name))<SUB>12</SUB>> ]
+"65" [label = <(IDENTIFIER,user_name,process_name(user_name))<SUB>12</SUB>> ]
+"87" [label = <(LOCAL,input: ANY)<SUB>11</SUB>> ]
+"89" [label = <(LOCAL,user_name: __builtin.input.&lt;returnValue&gt;)<SUB>11</SUB>> ]
+"90" [label = <(LOCAL,process_name: ANY)<SUB>12</SUB>> ]
+"58" [label = <(MODIFIER,VIRTUAL)> ]
+"59" [label = <(METHOD_RETURN,ANY)<SUB>10</SUB>> ]
+  "56" -> "58" 
+  "56" -> "57" 
+  "56" -> "59" 
+  "57" -> "64" 
+  "57" -> "87" 
+  "57" -> "67" 
+  "57" -> "89" 
+  "57" -> "90" 
+  "64" -> "63" 
+  "64" -> "62" 
+  "62" -> "61" 
+  "62" -> "60" 
+  "67" -> "66" 
+  "67" -> "65" 
+}

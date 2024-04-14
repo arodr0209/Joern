@@ -1,0 +1,31 @@
+digraph "process_name" {  
+"27" [label = <(&lt;operator&gt;.assignment,temp_list = [])<SUB>2</SUB>> ]
+"30" [label = <(&lt;operator&gt;.assignment,result_list = [])<SUB>3</SUB>> ]
+"36" [label = <(append,temp_list.append(name))<SUB>5</SUB>> ]
+"44" [label = <(append,result_list.append(temp_list[0]))<SUB>6</SUB>> ]
+"49" [label = <(print,print(result_list[0]))<SUB>8</SUB>> ]
+"25" [label = <(&lt;operator&gt;.listLiteral,[])<SUB>2</SUB>> ]
+"28" [label = <(&lt;operator&gt;.listLiteral,[])<SUB>3</SUB>> ]
+"34" [label = <(&lt;operator&gt;.fieldAccess,temp_list.append)<SUB>5</SUB>> ]
+"42" [label = <(&lt;operator&gt;.fieldAccess,result_list.append)<SUB>6</SUB>> ]
+"39" [label = <(&lt;operator&gt;.indexAccess,temp_list[0])<SUB>6</SUB>> ]
+"47" [label = <(&lt;operator&gt;.indexAccess,result_list[0])<SUB>8</SUB>> ]
+"33" [label = <(FIELD_IDENTIFIER,append,append)<SUB>5</SUB>> ]
+"41" [label = <(FIELD_IDENTIFIER,append,append)<SUB>6</SUB>> ]
+"20" [label = <(METHOD,process_name)<SUB>1</SUB>> ]
+"24" [label = <(METHOD_RETURN,ANY)<SUB>1</SUB>> ]
+  "27" -> "28" 
+  "30" -> "33" 
+  "36" -> "41" 
+  "44" -> "47" 
+  "49" -> "24" 
+  "25" -> "27" 
+  "28" -> "30" 
+  "34" -> "36" 
+  "42" -> "39" 
+  "39" -> "44" 
+  "47" -> "49" 
+  "33" -> "34" 
+  "41" -> "42" 
+  "20" -> "25" 
+}
